@@ -1,0 +1,720 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Dancing+Script:wght@400..700&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+AU+VIC+Guides&family=Playwrite+GB+J+Guides:ital@0;1&family=Playwrite+HR+Lijeva+Guides&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #000;
+    font-family: popping;
+    position: relative;
+}
+.nav{
+    height: 10vh;
+    width: 0%;
+    background-color: rgba(73, 73, 74, 0.341);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    backdrop-filter: blur(5px);
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 5;
+    transition: 1s;
+}
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 100px;
+    margin-right: 50px;
+}
+
+
+.nav img{
+    height: 100%;
+}
+li{
+    list-style: none;
+    cursor: pointer;
+    position: relative;
+}
+li::before{
+position: absolute;
+content: '';
+height: 0%;
+width: 100%;
+background-color: rgb(148, 126, 169);
+top: 100%;
+left: -70%;
+transition: 1s;
+}
+li:hover::before{
+    left: 0%;
+    height: 1px;
+}
+
+.hero{
+    height: 100vh;
+   position: relative;
+}
+.hand{
+    height: 60px;
+    animation: hand infinite 1s;
+    transition: 1s;
+}
+.hand:hover{
+    height: 60px;
+
+}
+@keyframes hand {
+0%{
+    rotate: 0deg;
+}
+
+50%{
+    rotate: -20deg;
+}
+100%{
+    rotate: 0deg;  
+}
+}
+#logo{
+    rotate: 360deg;
+    transition: 2s;
+}
+.info{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.ball{
+    height: 900px;
+    width: 900px;
+    position: fixed;
+    z-index: -1;
+    border-radius: 50%;
+    background:linear-gradient(to right ,
+    #4cc9f0,
+    #4361ee,
+    #3f37c9,
+    #3a0ca3,
+    #480ca8,
+    #560bad,
+    #7209b7,
+    #b5179e,
+    #f72585,
+    red,
+    red,
+    red
+        ); 
+filter: blur(400px);
+box-shadow: orangered 0px 0px 200px;
+
+}
+.get{
+    height: 40px;
+    width: 300px;
+    font-family: popping;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.get:hover{
+    border-radius: 5px;
+}
+.get::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: -60%;
+    top: 0;
+    rotate: 20deg;
+    transition: 1s;
+    background-color:     #7209b7;
+        z-index: -1; 
+}
+.get:hover::before{
+    left: 60%;
+    rotate: 20deg;
+}
+#logo{
+animation: logo infinite 30s;
+
+}
+@keyframes logo {
+    0%{
+        rotate: 0deg;
+    }
+      
+    50%{
+        rotate: 360deg;
+    }
+
+    100%{
+        rotate: 0deg;
+    }
+}
+
+.about{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+.card{
+    height: 450px;
+    width: 60%;
+    border-radius: 20px;
+    display: flex;
+
+}
+.img{
+    height: 100%;
+    width: 30%;
+}
+.info2{
+    height: 100%;
+    width: 70%;
+    border-radius: 0px 20px 20px 0px;
+    color: white;
+}
+.img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.type{
+    display: flex;
+    align-items: center;
+    height: 200px;
+    width: 610px;
+    font-size: 45px;
+    justify-content: center;
+    margin-bottom: 50px;
+    font-family: popping;
+}
+.mr{
+    border-right: #000 solid ;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:  typing 8s steps(16) infinite ,
+    cursor .4s step-end infinite alternate;
+    color: #fff;
+    text-shadow: rgba(128, 128, 128, 0.374) 5px 5px 5px;
+}
+@keyframes cursor {
+    50%{
+        border-color: transparent;
+    }
+}
+@keyframes typing {
+    0%{
+        width: 0;
+        transition: 1s;
+    }
+
+    
+    
+
+}
+
+.info2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background: rgba(128, 128, 128, 0.212);
+    backdrop-filter: blur(10px);
+}
+.info2 h3{
+    background-color: rgba(128, 128, 128, 0.308);
+    width: 100%;
+    height:30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px
+}
+
+.icon{
+    background-color: rgb(55, 55, 55);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.icon i{
+    background-color: rgba(204, 203, 203, 0.492); 
+    height: 40px;
+    width: 60px;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    border: solid white 1px;
+    border-radius: 5px;
+margin-left: 10px
+    
+}
+.info2 p{
+height: 100px;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+    
+.name{
+    font-size: 50px;
+    color: rgb(187, 187, 187);
+}
+.name span{
+    color: white;
+}
+.back{
+    position: absolute;
+    font-size: 300px;
+    z-index: -1;
+    color: #9d6161a5;
+    font-family:   "Dancing Script", serif;
+
+}
+.info h1{
+    color: orangered;
+
+}
+.projects{
+    height: 100vh;
+}
+.one,.two{
+    height: 250px;
+    width: 70%;
+    border-radius: 16px;
+}
+
+.projects{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+}
+.one{
+    margin-top: 50px;
+    display: flex;
+}
+.my{
+    position: absolute;
+    font-size: 200px;
+    color: #9d6161a5;
+    filter: blur(5px);
+    z-index: -2;
+    font-family:   "Dancing Script", serif;
+
+}
+.one:hover{
+    z-index: 1;
+}
+.two:hover{
+    z-index: 1;
+}
+.p1{
+    height: 100%;
+    width: 40%;
+    background-color: red;
+    border-radius: 20px 0px 0px 20px;
+}
+.ex1{
+    height: 100%;
+    width: 60%;
+    background-color: yellow;
+    border-radius: 0px 20px 20px 0px;
+}
+.p1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px 0px 0px 20px;
+
+}
+.p2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0px 20px 20px 0px; 
+}
+
+.p2{
+    height: 100%;
+    width: 40%;
+    background-color: red;
+    order: 1;
+    border-radius: 0px 20px 20px 0px; 
+
+}
+
+
+
+.ex2{
+    height: 100%;
+    width: 60%;
+    background-color: rgba(164, 164, 164, 0.159) ;
+    border-radius: 20px 0px 0px 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center; 
+    backdrop-filter: blur(5px);
+    color: white;
+}
+.two{
+    display: flex;
+}
+
+
+
+.ex1{
+   
+    background-color: rgba(164, 164, 164, 0.159) ;
+    border-radius: 0px 20px 20px 0px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center; 
+    backdrop-filter: blur(5px);
+    color: white;  
+}
+
+.ex2 button{
+    height: 40px;
+    width: 40%;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: rgb(58, 57, 57) 0px 4px 0px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.ex2 button:active{
+    box-shadow: rgb(58, 57, 57) 0px 0px 0px;
+
+}
+
+.ex1 button{
+    height: 40px;
+    width: 40%;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: rgb(58, 57, 57) 0px 4px 0px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+}
+.ex1 button:active{
+    box-shadow: rgb(58, 57, 57) 0px 0px 0px;
+
+}
+
+a{
+ 
+}
+.contact{
+    height: 100vh;
+    /* background-color: #222222ad; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    height: 70%;
+    width: 60%;
+    border-radius: 20px;
+    position: relative;
+    backdrop-filter: blur(5px);
+    border: double white 3px;
+    display: flex;
+}
+.left{
+   height: 100%;
+   width: 50%;
+   background-color: #8d99ae9a; 
+   position: relative;
+   /* transform: translate(-50%,-50%); */
+   border-radius: 20px 0px 0px 20px;
+   backdrop-filter: blur(5px);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+   text-align: center;
+
+
+}
+.con{
+    color: #9d6161a5;
+    font-size: 230px;
+    position: absolute;
+    filter: blur(5px);
+    font-family:   "Dancing Script", serif;
+
+}
+.left img{
+    position: absolute;
+    height: 80%;
+    top: -10%;
+    left: -30%;
+animation: rose infinite  20s;
+filter: blur(3px);
+}
+
+.left h1{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 50px;
+    font-family:   "Dancing Script", serif;
+    text-shadow: gray 5px 5px 5px;
+    z-index: 5;
+}
+.right{
+    background-color: #1756765a;
+    height: 100%;
+    width: 50%;
+    backdrop-filter: blur(5px);
+display: flex;
+align-items: center;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.right input{
+    height: 40px;
+    width: 80%;
+    border-radius: 18px;
+    padding-left: 20px;
+}
+.right textarea{
+    height: 40%;
+    width: 80%;
+    padding-left: 10px;
+    border-radius: 10px;
+    padding-top: 10px;
+}
+.inputs{
+    height:50% ;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.text{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+.text button{
+    height: 40px;
+    width: 80%;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: #222 0px 4px 0px;
+    position: relative;
+    font-size: 25px;
+    font-family: popping;
+    overflow: hidden;
+    z-index: 1;
+}
+.tt::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 200%;
+    left: -100%;
+    top: 0;
+    rotate: 20deg;
+    background-color: #7209b7;
+    transition: 1s;
+    z-index: -1;
+}
+.tt:hover::before{
+    left: 0%;
+}
+
+.tt1,.tt2{
+    height: 40px;
+width: 120px;
+position: relative;
+overflow: hidden;
+z-index: 1;
+}
+
+.tt1::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 200%;
+    left: -120%;
+    top: 0;
+    rotate: 20deg;
+    background-color: #7209b7;
+    transition: 1s;
+    z-index: -1;
+}
+.tt1:hover::before{
+    left: 0%;
+ 
+}
+
+.tt2::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 200%;
+    left: -120%;
+    top: 0;
+    rotate: 20deg;
+    background-color: #7209b7;
+    transition: 1s;
+    z-index: -1;
+}
+.tt2:hover::before{
+    left: 0%;
+ 
+}
+
+@keyframes rose{
+0%{
+    left: -20%;
+}
+50%{
+    left: -50%;
+    rotate: -20deg;
+
+
+}
+100%{
+    left: -20%;
+
+}
+
+
+
+
+}
+
+
+
+#up{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    color: white;
+    background-color: #bd7ce8;
+}
+
+.foter{
+    height: 30vh;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main2{
+    height: 90%;
+    width: 90%;
+    background-color: #2222224e;
+    border-radius: 20px;
+    margin-bottom: 100px;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    display: flex;
+    color: white;
+    justify-content: space-evenly;
+    align-items: center;
+    border: double 10px rgba(255, 255, 255, 0.303);
+}
+.sen{
+    position: absolute;
+    font-size: 130px;
+    color: #9d6161a5;
+    font-family:   "Dancing Script", serif;
+
+}
+.main2 ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 250px;
+    height: 100%;
+    font-size: 20px;
+    border-radius: 20px;
+}
+.qr{
+    order: 1;
+    border-radius: 20px;
+}
+.icons2{
+    border-radius: 20px;
+    height: 100%;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    gap: 10px;
+    transition: 1s;
+}
+.icons2 i:hover{
+    cursor: pointer;
+    font-size: 35px;
+    transition: 1s;
+
+}
+a{
+text-decoration: none;
+color: #000;
+font-family: popping;
+font-size: 25px;
+}
+.p2{
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+
+}
